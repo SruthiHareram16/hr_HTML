@@ -1,0 +1,291 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #F8F6F5;
+}
+section 
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+section::before 
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*background: linear-gradient(#081,#158,#138);
+  animation: animate 5s linear infinite;*/
+}
+@keyframes animate 
+{
+  0%
+  {
+    transform: translateY(-100%);
+  }
+  100%
+  {
+    transform: translateY(100%);
+  }
+}
+section span 
+{
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background: #F8F6F5;
+  z-index: 2;
+  transition: 1.5s;
+}
+section span:hover 
+{
+  /*background: #0f0;
+  transition: 0s;*/
+}
+
+section .signin
+{
+  position: absolute;
+  width: 400px;
+  background: #fff;  
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(45, 67, 99, 0.15);
+}
+section .signin .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+section .signin .content h2 
+{
+  font-size: 2em;
+  color: #001D39;
+  text-transform: uppercase; 
+  font-family:Playfair Display ;
+}
+section .signin .content .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+section .signin .content .form .inputBox
+{
+  position: relative;
+  width: 100%;
+}
+section .signin .content .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+section .signin .content .form .inputBox i 
+{
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i
+{
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #ccc;
+}
+.signin .content .form .links 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.signin .content .form .links a 
+{
+  color: #001D39;
+  text-decoration: none;
+  font-size: 1em;
+  text-decoration: underline;
+}
+.signin .content .form .links a:nth-child(2)
+{
+  color: #0f0;
+  font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"]
+{
+  padding: 15px;
+  background: #519E8A;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 1.5px solid #CCC;
+  border-right: none;
+  padding: 5px 20px;
+  height: 54px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #999;
+}
+
+.searchTerm:focus{
+  color: #001D39;
+}
+
+.searchButton {
+  width: 60px;
+  height: 54px;
+  border: 1px solid #00B4CC;
+  background: #519E8A;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.searchButton img{
+padding-top: 10px;
+}
+
+.search-title h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: Playfair Display;
+  color: #001D39;
+  font-size: 2em;
+}
+
+.search-wrap p {
+  text-align: center;
+  padding-bottom: 48px;
+  font-size: 0.8750em;
+  color: #001D39;
+}
+
+.top-header {
+  background: #F8F6F5;
+  top: 0px;
+  position: fixed;
+  height: 63px;
+  width: 100%;
+}
+
+.header-container {
+  width: 100%;
+/*  max-width: 1200px;*/
+  margin: 0px auto;
+ display: flex; 
+ padding: 20px 30px;
+}
+
+.left {
+  width: 50%;
+}
+
+.left img {
+  width: 50px;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.search-wrap{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 100%;
+  /* align-content: last baseline; */
+}
+
+@media (max-width: 900px)
+{
+  section span 
+  {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 600px)
+{
+  section span 
+  {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+}
